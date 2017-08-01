@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RTCppProperties="http://www.eclipse.org/papyrus/umlrt/cppproperties" xmlns:UMLRTStateMachines="http://www.eclipse.org/papyrus/umlrt/statemachine" xmlns:UMLRealTime="http://www.eclipse.org/papyrus/umlrt" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_M6WogMFeEeaVzb3gsu6Gyw" name="RootElement">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Tvla8MFeEeaVzb3gsu6Gyw" name="Top" isActive="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_t3O5QMFeEeaVzb3gsu6Gyw" name="referee" visibility="protected" type="_VgfX4MFeEeaVzb3gsu6Gyw" isOrdered="true" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_uwfcgMFeEeaVzb3gsu6Gyw" name="player" visibility="protected" type="_Yr3HsMFeEeaVzb3gsu6Gyw" isOrdered="true" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WObKAMFgEeaVzb3gsu6Gyw" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V_HisMFgEeaVzb3gsu6Gyw" value="2"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ts_RUN9XEeaslsNogbStzw" name="observer" visibility="protected" type="_7RXxINRMEearFdKvR_8nWw" isOrdered="true" aggregation="composite"/>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_xwZjMMFeEeaVzb3gsu6Gyw" name="RTConnector1">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_xwfp0MFeEeaVzb3gsu6Gyw" partWithPort="_t3O5QMFeEeaVzb3gsu6Gyw" role="_oanfkMFeEeaVzb3gsu6Gyw"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_xwfp0cFeEeaVzb3gsu6Gyw" partWithPort="_uwfcgMFeEeaVzb3gsu6Gyw" role="_r5uDsMFeEeaVzb3gsu6Gyw"/>
+      </ownedConnector>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VgfX4MFeEeaVzb3gsu6Gyw" name="Referee" classifierBehavior="_HfQcUMFfEeaVzb3gsu6Gyw" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_oanfkMFeEeaVzb3gsu6Gyw" name="play" visibility="public" type="_b9R1IMFeEeaVzb3gsu6Gyw" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZOBusMFgEeaVzb3gsu6Gyw" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZN82MMFgEeaVzb3gsu6Gyw" value="2"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Dk4xIMFiEeaVzb3gsu6Gyw" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_6kIb0IeXEeSVyrlWP4nYew"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Hcyk4MFkEeaVzb3gsu6Gyw" name="round">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_DiN60MFmEeaVzb3gsu6Gyw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CqBnMMFpEeaVzb3gsu6Gyw" name="firstPlayerChoice" type="_hKm9MMGAEeaVzb3gsu6Gyw">
+        <defaultValue xmi:type="uml:InstanceValue" xmi:id="_z7a7YMGBEeaVzb3gsu6Gyw" instance="_m3dLQMGAEeaVzb3gsu6Gyw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IwBVEMFpEeaVzb3gsu6Gyw" name="secondPlayerChoice" type="_hKm9MMGAEeaVzb3gsu6Gyw">
+        <defaultValue xmi:type="uml:InstanceValue" xmi:id="_UhMJIMGBEeaVzb3gsu6Gyw" instance="_m3dLQMGAEeaVzb3gsu6Gyw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bkR98MFsEeaVzb3gsu6Gyw" name="firstPlayerScore">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_1gk7UMGBEeaVzb3gsu6Gyw" value="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CM6LYMF_EeaVzb3gsu6Gyw" name="secondPlayerScore">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_FRhy8MF_EeaVzb3gsu6Gyw" value="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_U_2AUN9XEeaslsNogbStzw" name="observation" visibility="protected" type="_TIMcUNRNEearFdKvR_8nWw" isOrdered="true" aggregation="composite" isBehavior="true" isService="false"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_WP3dwN9XEeaslsNogbStzw" name="timer" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_MxQZgGXsEeS_4daqvwyFrg"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_HfQcUMFfEeaVzb3gsu6Gyw" name="RefereeStateMachine" isReentrant="false">
+        <region xmi:type="uml:Region" xmi:id="_HfbbcMFfEeaVzb3gsu6Gyw" name="Region">
+          <transition xmi:type="uml:Transition" xmi:id="_8MjZ0ExXEeeqN6OadgglSg" name="Initial" kind="external" source="_HfhiEMFfEeaVzb3gsu6Gyw" target="_0bctpUxaEeeqN6OadgglSg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_WZ_XEExYEeeqN6OadgglSg" kind="external" source="_0bmepkxaEeeqN6OadgglSg" target="_aNM7QExeEeeqN6OadgglSg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_tjGnsExYEeeqN6OadgglSg" kind="external" source="_aNWFMExeEeeqN6OadgglSg" target="_HzVJdE05EeeqN6OadgglSg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_5iVkYExZEeeqN6OadgglSg" kind="external" source="_aNfPIExeEeeqN6OadgglSg" target="_2OZucExZEeeqN6OadgglSg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_7C3jAExZEeeqN6OadgglSg" kind="external" source="_HzeTYE05EeeqN6OadgglSg" target="_2OZucExZEeeqN6OadgglSg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_-AFJ4U08EeeqN6OadgglSg" kind="external" source="_2OZucExZEeeqN6OadgglSg" target="_9_7Y4E08EeeqN6OadgglSg"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_HfhiEMFfEeaVzb3gsu6Gyw" name=""/>
+          <subvertex xmi:type="uml:State" xmi:id="_6tCH0ExXEeeqN6OadgglSg" name="Round 1">
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_0bctpUxaEeeqN6OadgglSg" name="" kind="entryPoint"/>
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_0bmepkxaEeeqN6OadgglSg" name="" kind="exitPoint"/>
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_9_7Y4E08EeeqN6OadgglSg" name="" kind="entryPoint"/>
+            <region xmi:type="uml:Region" xmi:id="_0bTjsExaEeeqN6OadgglSg" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_HEeeQExbEeeqN6OadgglSg" name="in" kind="local" source="_0bctpUxaEeeqN6OadgglSg" target="_7R2kwExaEeeqN6OadgglSg"/>
+              <transition xmi:type="uml:Transition" xmi:id="_LgCYsExdEeeqN6OadgglSg" kind="external" source="_IBC-wExcEeeqN6OadgglSg" target="_EyRgMExdEeeqN6OadgglSg">
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_dnGEsExdEeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>    int player = msg->sapIndex();&#xD;
+    log.show(&quot;Player %d played: &quot;, player);&#xD;
+    switch (choice) {&#xD;
+        case ROCK		:	log.show(&quot;ROCK&quot;); break;&#xD;
+        case PAPER		:	log.show(&quot;PAPER&quot;); break;&#xD;
+        case SCISSORS	:	log.show(&quot;SCISSORS&quot;); break;&#xD;
+    }&#xD;
+    if (player == 1) {&#xD;
+    this->firstPlayerChoice = choice;&#xD;
+    }&#xD;
+    else if (player == 2){&#xD;
+    this->secondPlayerChoice = choice;&#xD;
+    } &#xD;
+    log.show(&quot;\n&quot;);</body>
+                </effect>
+                <trigger xmi:type="uml:Trigger" xmi:id="_ZHDoAExdEeeqN6OadgglSg" event="_BhCxcMFfEeaVzb3gsu6Gyw" port="_oanfkMFeEeaVzb3gsu6Gyw"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_sVMQ0ExdEeeqN6OadgglSg" name="" kind="external" source="_EyRgMExdEeeqN6OadgglSg" target="_0bmepkxaEeeqN6OadgglSg">
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_yc5O4ExdEeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>    int player = msg->sapIndex();&#xD;
+    log.show(&quot;Player %d played: &quot;, player);&#xD;
+    switch (choice) {&#xD;
+    case ROCK		:	log.show(&quot;ROCK&quot;); break;&#xD;
+    case PAPER		:	log.show(&quot;PAPER&quot;); break;&#xD;
+    case SCISSORS	:	log.show(&quot;SCISSORS&quot;); break;&#xD;
+    }&#xD;
+    if (player == 1) {&#xD;
+    this->firstPlayerChoice = choice;&#xD;
+    }&#xD;
+    else if (player == 2){&#xD;
+    this->secondPlayerChoice = choice;&#xD;
+    } &#xD;
+    log.show(&quot;\n&quot;);&#xD;
+    if (this->firstPlayerChoice == this->secondPlayerChoice) {&#xD;
+    log.show(&quot;Round %d Tied&quot;, this->round);&#xD;
+    } else if ((this->secondPlayerChoice + 1) % 3 == this->firstPlayerChoice) {&#xD;
+    log.show(&quot;Player 1 Wins Round %d!&quot;, this->round);&#xD;
+    this->firstPlayerScore++;&#xD;
+    } else {&#xD;
+    log.show(&quot;Player 2 Wins Round %d!&quot;, this->round);&#xD;
+    this->secondPlayerScore++;&#xD;
+    }&#xD;
+    log.show(&quot;\n&quot;);&#xD;
+    this->round++;</body>
+                </effect>
+                <trigger xmi:type="uml:Trigger" xmi:id="_uBMfoExdEeeqN6OadgglSg" event="_BhCxcMFfEeaVzb3gsu6Gyw" port="_oanfkMFeEeaVzb3gsu6Gyw"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_ybyQEExnEeeqN6OadgglSg" kind="external" source="_7R2kwExaEeeqN6OadgglSg" target="_IBC-wExcEeeqN6OadgglSg">
+                <trigger xmi:type="uml:Trigger" xmi:id="_zKo6IExnEeeqN6OadgglSg" port="_WP3dwN9XEeaslsNogbStzw">
+                  <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
+                </trigger>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_CzzXkE09EeeqN6OadgglSg" name="new game" kind="local" source="_9_7Y4E08EeeqN6OadgglSg" target="_7R2kwExaEeeqN6OadgglSg"/>
+              <subvertex xmi:type="uml:State" xmi:id="_7R2kwExaEeeqN6OadgglSg" name="Waiting For Round">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_iN7X0ExbEeeqN6OadgglSg" name="setting timer">
+                  <language>C++</language>
+                  <body>timer.informIn(UMLRTTimespec(2,0));</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_IBC-wExcEeeqN6OadgglSg" name="Starting Round">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_VMtu0ExcEeeqN6OadgglSg" name="starting round">
+                  <language>C++</language>
+                  <body>log.show(&quot;\n-- Starting round %d --\n&quot;, this->round);&#xD;
+play.go(this->round).send();</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_EyRgMExdEeeqN6OadgglSg" name="Getting Player Choice"/>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_RKZswExYEeeqN6OadgglSg" name="Round 2">
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_aNM7QExeEeeqN6OadgglSg" kind="entryPoint">
+              <name xsi:nil="true"/>
+            </connectionPoint>
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_aNWFMExeEeeqN6OadgglSg" name="" kind="exitPoint"/>
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_aNfPIExeEeeqN6OadgglSg" name="" kind="exitPoint"/>
+            <region xmi:type="uml:Region" xmi:id="_aNHbsExeEeeqN6OadgglSg" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_7A36wExgEeeqN6OadgglSg" name="in" kind="local" source="_aNM7QExeEeeqN6OadgglSg" target="_vmuLoExgEeeqN6OadgglSg"/>
+              <transition xmi:type="uml:Transition" xmi:id="_zJbA4ExhEeeqN6OadgglSg" name="" kind="external" source="_bCA8AExhEeeqN6OadgglSg" target="_wdBFAExhEeeqN6OadgglSg">
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_8GTcUExhEeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>    int player = msg->sapIndex();&#xD;
+    log.show(&quot;Player %d played: &quot;, player);&#xD;
+    switch (choice) {&#xD;
+        case ROCK		:	log.show(&quot;ROCK&quot;); break;&#xD;
+        case PAPER		:	log.show(&quot;PAPER&quot;); break;&#xD;
+        case SCISSORS	:	log.show(&quot;SCISSORS&quot;); break;&#xD;
+    }&#xD;
+    if (player == 1) {&#xD;
+    this->firstPlayerChoice = choice;&#xD;
+    }&#xD;
+    else if (player == 2){&#xD;
+    this->secondPlayerChoice = choice;&#xD;
+    } &#xD;
+    log.show(&quot;\n&quot;);</body>
+                </effect>
+                <trigger xmi:type="uml:Trigger" xmi:id="_0ivkQExhEeeqN6OadgglSg" event="_BhCxcMFfEeaVzb3gsu6Gyw" port="_oanfkMFeEeaVzb3gsu6Gyw"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_rmaF8ExiEeeqN6OadgglSg" name="" kind="external" source="_wdBFAExhEeeqN6OadgglSg" target="_SzEvMExiEeeqN6OadgglSg">
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_5lDLEExiEeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>    int player = msg->sapIndex();&#xD;
+    log.show(&quot;Player %d played: &quot;, player);&#xD;
+    switch (choice) {&#xD;
+    case ROCK		:	log.show(&quot;ROCK&quot;); break;&#xD;
+    case PAPER		:	log.show(&quot;PAPER&quot;); break;&#xD;
+    case SCISSORS	:	log.show(&quot;SCISSORS&quot;); break;&#xD;
+    }&#xD;
+    if (player == 1) {&#xD;
+    this->firstPlayerChoice = choice;&#xD;
+    }&#xD;
+    else if (player == 2){&#xD;
+    this->secondPlayerChoice = choice;&#xD;
+    } &#xD;
+    log.show(&quot;\n&quot;);&#xD;
+    if (this->firstPlayerChoice == this->secondPlayerChoice) {&#xD;
+    log.show(&quot;Round %d Tied&quot;, this->round);&#xD;
+    } else if ((this->secondPlayerChoice + 1) % 3 == this->firstPlayerChoice) {&#xD;
+    log.show(&quot;Player 1 Wins Round %d!&quot;, this->round);&#xD;
+    this->firstPlayerScore++;&#xD;
+    } else {&#xD;
+    log.show(&quot;Player 2 Wins Round %d!&quot;, this->round);&#xD;
+    this->secondPlayerScore++;&#xD;
+    }&#xD;
+    log.show(&quot;\n&quot;);&#xD;
+    this->round++;</body>
+                </effect>
+                <trigger xmi:type="uml:Trigger" xmi:id="_tExhYExiEeeqN6OadgglSg" event="_BhCxcMFfEeaVzb3gsu6Gyw" port="_oanfkMFeEeaVzb3gsu6Gyw"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_WhivkExjEeeqN6OadgglSg" name="to round 3" guard="_q1ctoExjEeeqN6OadgglSg" kind="external" source="_SzEvMExiEeeqN6OadgglSg" target="_aNWFMExeEeeqN6OadgglSg">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_q1ctoExjEeeqN6OadgglSg">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_3P9GgExjEeeqN6OadgglSg">
+                    <language>C++</language>
+                    <body>bool isNotOver = firstPlayerScore == secondPlayerScore;&#xD;
+return isNotOver;</body>
+                  </specification>
+                </ownedRule>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_sqcOcExlEeeqN6OadgglSg" name="game over" kind="external" source="_SzEvMExiEeeqN6OadgglSg" target="_oFnYYExlEeeqN6OadgglSg"/>
+              <transition xmi:type="uml:Transition" xmi:id="_xclHwExlEeeqN6OadgglSg" name="player 1 wins" guard="_GFTfQExmEeeqN6OadgglSg" kind="external" source="_oFnYYExlEeeqN6OadgglSg" target="_aNfPIExeEeeqN6OadgglSg">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_GFTfQExmEeeqN6OadgglSg">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_N8NxIExmEeeqN6OadgglSg">
+                    <language>C++</language>
+                    <body>bool player1Wins = firstPlayerScore > secondPlayerScore;&#xD;
+return player1Wins;</body>
+                  </specification>
+                </ownedRule>
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_d_tC4ExmEeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>log.show(&quot;\nplayer 1 wins the game!&quot;);</body>
+                </effect>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_01qjcExlEeeqN6OadgglSg" name="player 2 wins" kind="external" source="_oFnYYExlEeeqN6OadgglSg" target="_aNfPIExeEeeqN6OadgglSg">
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_hlO_IExmEeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>log.show(&quot;\nplayer 2 wins the game!&quot;);</body>
+                </effect>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_5uN74ExnEeeqN6OadgglSg" name="" kind="external" source="_vmuLoExgEeeqN6OadgglSg" target="_bCA8AExhEeeqN6OadgglSg">
+                <trigger xmi:type="uml:Trigger" xmi:id="_6Ie2AExnEeeqN6OadgglSg" port="_WP3dwN9XEeaslsNogbStzw">
+                  <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
+                </trigger>
+              </transition>
+              <subvertex xmi:type="uml:State" xmi:id="_vmuLoExgEeeqN6OadgglSg" name="Waiting for Round">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_5cD5EExgEeeqN6OadgglSg" name="setting timer">
+                  <language>C++</language>
+                  <body>timer.informIn(UMLRTTimespec(2,0));</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_bCA8AExhEeeqN6OadgglSg" name="Starting Round">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_kZoysExhEeeqN6OadgglSg" name="starting round">
+                  <language>C++</language>
+                  <body>log.show(&quot;\n-- Starting round %d --\n&quot;, this->round);&#xD;
+play.go(this->round).send();</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_wdBFAExhEeeqN6OadgglSg" name="Getting Player Choice"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_SzEvMExiEeeqN6OadgglSg" name="isGameOver?" kind="choice"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_oFnYYExlEeeqN6OadgglSg" name="whoWon?" kind="choice"/>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_qkeTYExYEeeqN6OadgglSg" name="Round 3">
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_HzVJdE05EeeqN6OadgglSg" kind="entryPoint">
+              <name xsi:nil="true"/>
+            </connectionPoint>
+            <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_HzeTYE05EeeqN6OadgglSg" name="" kind="exitPoint"/>
+            <region xmi:type="uml:Region" xmi:id="_HzLYcE05EeeqN6OadgglSg" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_PxTFkE05EeeqN6OadgglSg" name="in" kind="local" source="_HzVJdE05EeeqN6OadgglSg" target="_NMfmgE05EeeqN6OadgglSg"/>
+              <transition xmi:type="uml:Transition" xmi:id="_e06OsE05EeeqN6OadgglSg" kind="external" source="_NMfmgE05EeeqN6OadgglSg" target="_aDJI0E05EeeqN6OadgglSg">
+                <trigger xmi:type="uml:Trigger" xmi:id="_gSveoE05EeeqN6OadgglSg" port="_WP3dwN9XEeaslsNogbStzw">
+                  <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
+                </trigger>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_lbResE05EeeqN6OadgglSg" name="" kind="external" source="_aDJI0E05EeeqN6OadgglSg" target="_jaSeYE05EeeqN6OadgglSg">
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_soQp0E05EeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>    int player = msg->sapIndex();&#xD;
+    log.show(&quot;Player %d played: &quot;, player);&#xD;
+    switch (choice) {&#xD;
+        case ROCK		:	log.show(&quot;ROCK&quot;); break;&#xD;
+        case PAPER		:	log.show(&quot;PAPER&quot;); break;&#xD;
+        case SCISSORS	:	log.show(&quot;SCISSORS&quot;); break;&#xD;
+    }&#xD;
+    if (player == 1) {&#xD;
+    this->firstPlayerChoice = choice;&#xD;
+    }&#xD;
+    else if (player == 2){&#xD;
+    this->secondPlayerChoice = choice;&#xD;
+    } &#xD;
+    log.show(&quot;\n&quot;);</body>
+                </effect>
+                <trigger xmi:type="uml:Trigger" xmi:id="_mCIqYE05EeeqN6OadgglSg" event="_BhCxcMFfEeaVzb3gsu6Gyw" port="_oanfkMFeEeaVzb3gsu6Gyw"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_aTYHwE06EeeqN6OadgglSg" kind="external" source="_jaSeYE05EeeqN6OadgglSg" target="_XA5DUE06EeeqN6OadgglSg">
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_rGPA8E06EeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>    int player = msg->sapIndex();&#xD;
+    log.show(&quot;Player %d played: &quot;, player);&#xD;
+    switch (choice) {&#xD;
+    case ROCK		:	log.show(&quot;ROCK&quot;); break;&#xD;
+    case PAPER		:	log.show(&quot;PAPER&quot;); break;&#xD;
+    case SCISSORS	:	log.show(&quot;SCISSORS&quot;); break;&#xD;
+    }&#xD;
+    if (player == 1) {&#xD;
+    this->firstPlayerChoice = choice;&#xD;
+    }&#xD;
+    else if (player == 2){&#xD;
+    this->secondPlayerChoice = choice;&#xD;
+    } &#xD;
+    log.show(&quot;\n&quot;);&#xD;
+    if (this->firstPlayerChoice == this->secondPlayerChoice) {&#xD;
+    log.show(&quot;Round %d Tied&quot;, this->round);&#xD;
+    } else if ((this->secondPlayerChoice + 1) % 3 == this->firstPlayerChoice) {&#xD;
+    log.show(&quot;Player 1 Wins Round %d!&quot;, this->round);&#xD;
+    this->firstPlayerScore++;&#xD;
+    } else {&#xD;
+    log.show(&quot;Player 2 Wins Round %d!&quot;, this->round);&#xD;
+    this->secondPlayerScore++;&#xD;
+    }&#xD;
+    log.show(&quot;\n&quot;);&#xD;
+    this->round++;</body>
+                </effect>
+                <trigger xmi:type="uml:Trigger" xmi:id="_gDtHoE06EeeqN6OadgglSg" event="_BhCxcMFfEeaVzb3gsu6Gyw" port="_oanfkMFeEeaVzb3gsu6Gyw"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_AsjpIE07EeeqN6OadgglSg" name="Tie" kind="external" source="_XA5DUE06EeeqN6OadgglSg" target="_HzeTYE05EeeqN6OadgglSg">
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_IaF8kE07EeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>log.show(&quot;\nGame Tied!&quot;);</body>
+                </effect>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_M5uwoE07EeeqN6OadgglSg" name="Player 2 Wins" guard="_UEtJkE07EeeqN6OadgglSg" kind="external" source="_XA5DUE06EeeqN6OadgglSg" target="_HzeTYE05EeeqN6OadgglSg">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_UEtJkE07EeeqN6OadgglSg">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_dXlqME07EeeqN6OadgglSg">
+                    <language>C++</language>
+                    <body>bool player2Wins = secondPlayerScore > firstPlayerScore;&#xD;
+return player2Wins;</body>
+                  </specification>
+                </ownedRule>
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_smDYcE07EeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>log.show(&quot;\nPlayer 2 Wins!&quot;);</body>
+                </effect>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_t44SQE07EeeqN6OadgglSg" name="Player 1 Wins" guard="_zhYL0E07EeeqN6OadgglSg" kind="external" source="_XA5DUE06EeeqN6OadgglSg" target="_HzeTYE05EeeqN6OadgglSg">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_zhYL0E07EeeqN6OadgglSg">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_7EhNIE07EeeqN6OadgglSg">
+                    <language>C++</language>
+                    <body>bool player1Wins = firstPlayerScore > secondPlayerScore;&#xD;
+return player1Wins;</body>
+                  </specification>
+                </ownedRule>
+                <effect xmi:type="uml:OpaqueBehavior" xmi:id="_DT1_AE08EeeqN6OadgglSg">
+                  <language>C++</language>
+                  <body>log.show(&quot;\nPlayer 1 Wins!&quot;);</body>
+                </effect>
+              </transition>
+              <subvertex xmi:type="uml:State" xmi:id="_NMfmgE05EeeqN6OadgglSg" name="Waiting for Round">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_Wl9QQE05EeeqN6OadgglSg" name="setting timer">
+                  <language>C++</language>
+                  <body>timer.informIn(UMLRTTimespec(2,0));</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_aDJI0E05EeeqN6OadgglSg" name="Starting Round">
+                <entry xmi:type="uml:OpaqueBehavior" xmi:id="_qr0D4E08EeeqN6OadgglSg" name="starting round">
+                  <language>C++</language>
+                  <body>log.show(&quot;\n-- Starting round %d --\n&quot;, this->round);&#xD;
+play.go(this->round).send();</body>
+                </entry>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_jaSeYE05EeeqN6OadgglSg" name="Getting Player Choice"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_XA5DUE06EeeqN6OadgglSg" name="whoWon?" kind="choice"/>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_2OZucExZEeeqN6OadgglSg" name="Game Over">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_C0js4E06EeeqN6OadgglSg" name="reset game">
+              <language>C++</language>
+              <body>log.show(&quot;\n\nStarting next game...\n\n&quot;);&#xD;
+this->firstPlayerScore = 0;&#xD;
+this->secondPlayerScore = 0;&#xD;
+this->round = 0;</body>
+            </entry>
+          </subvertex>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Yr3HsMFeEeaVzb3gsu6Gyw" name="Player" classifierBehavior="_SYFAAMFfEeaVzb3gsu6Gyw" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_r5uDsMFeEeaVzb3gsu6Gyw" name="play" visibility="public" type="_b9R1IMFeEeaVzb3gsu6Gyw" isOrdered="true" aggregation="composite" isBehavior="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_GZ4TMMFgEeaVzb3gsu6Gyw" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+        <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_6kIb0IeXEeSVyrlWP4nYew"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_XucUkN9XEeaslsNogbStzw" name="observation" visibility="protected" type="_TIMcUNRNEearFdKvR_8nWw" isOrdered="true" aggregation="composite" isBehavior="true" isService="false"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_SYFAAMFfEeaVzb3gsu6Gyw" name="PlayerStateMachine" isReentrant="false">
+        <region xmi:type="uml:Region" xmi:id="_SYLGoMFfEeaVzb3gsu6Gyw" name="Region">
+          <transition xmi:type="uml:Transition" xmi:id="_SYTpgMFfEeaVzb3gsu6Gyw" name="Initial" source="_SYNi4MFfEeaVzb3gsu6Gyw" target="_SYRNQMFfEeaVzb3gsu6Gyw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_grlLwMFoEeaVzb3gsu6Gyw">
+              <language>C++</language>
+              <body>srand(time(0));</body>
+            </effect>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="__hrFQMFfEeaVzb3gsu6Gyw" name="picking" source="_SYRNQMFfEeaVzb3gsu6Gyw" target="_SYRNQMFfEeaVzb3gsu6Gyw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_mowZAMFhEeaVzb3gsu6Gyw">
+              <language>C++</language>
+              <body>    int random = rand() % 3;&#xD;
+&#xD;
+    // Event sent to the observer capsule.&#xD;
+    // These events 'drive' the Java animation.&#xD;
+    Event e1;&#xD;
+    e1.setParam(&quot;player&quot;, this->getIndex());&#xD;
+    e1.setParam(&quot;round&quot;, round);&#xD;
+    e1.setParam(&quot;choice&quot;, random);&#xD;
+    e1.setParam(&quot;cmd&quot;, &quot;pick&quot;);&#xD;
+    observation.event(e1).send();&#xD;
+&#xD;
+    // send choice to referee&#xD;
+    play.picked(static_cast&lt;Choice>(random)).send();&#xD;
+</body>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_CBn5gMFgEeaVzb3gsu6Gyw" event="_CYqV8MFfEeaVzb3gsu6Gyw" port="_r5uDsMFeEeaVzb3gsu6Gyw"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_SYNi4MFfEeaVzb3gsu6Gyw">
+            <name xsi:nil="true"/>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_SYRNQMFfEeaVzb3gsu6Gyw" name="IDLE"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_b9a_EMFeEeaVzb3gsu6Gyw" name="Play">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_b9R1IMFeEeaVzb3gsu6Gyw" name="Play">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b9oacMFeEeaVzb3gsu6Gyw" client="_b9R1IMFeEeaVzb3gsu6Gyw" supplier="_b9hswMFeEeaVzb3gsu6Gyw" contract="_b9hswMFeEeaVzb3gsu6Gyw"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b91OwMFeEeaVzb3gsu6Gyw" client="_b9R1IMFeEeaVzb3gsu6Gyw" supplier="_b9w9UMFeEeaVzb3gsu6Gyw" contract="_b9w9UMFeEeaVzb3gsu6Gyw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_b9hswMFeEeaVzb3gsu6Gyw" name="Play">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_B7RPUMFfEeaVzb3gsu6Gyw" name="go">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_2HWcQOGSEeaj6NjEGxxytQ" name="round">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_b9q2sMFeEeaVzb3gsu6Gyw" name="Play~">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3IRm0MFeEeaVzb3gsu6Gyw" name="picked">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_9jzf0MFeEeaVzb3gsu6Gyw" name="choice" type="_hKm9MMGAEeaVzb3gsu6Gyw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_b9vIIMFeEeaVzb3gsu6Gyw" client="_b9R1IMFeEeaVzb3gsu6Gyw" supplier="_b9q2sMFeEeaVzb3gsu6Gyw"/>
+      <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_b9vvMMFeEeaVzb3gsu6Gyw" name="*"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_b9w9UMFeEeaVzb3gsu6Gyw" name="PlayIO"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_b92c4MFeEeaVzb3gsu6Gyw" client="_b9R1IMFeEeaVzb3gsu6Gyw" supplier="_b9w9UMFeEeaVzb3gsu6Gyw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_BhCxcMFfEeaVzb3gsu6Gyw" operation="_3IRm0MFeEeaVzb3gsu6Gyw"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_CYqV8MFfEeaVzb3gsu6Gyw" operation="_B7RPUMFfEeaVzb3gsu6Gyw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_hKm9MMGAEeaVzb3gsu6Gyw" name="Choice">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_m3dLQMGAEeaVzb3gsu6Gyw" name="ROCK"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_1ivT8MGAEeaVzb3gsu6Gyw" name="PAPER"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_2psU8MGAEeaVzb3gsu6Gyw" name="SCISSORS"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_rqPoENRIEeayFZJ-SYgDzA" name="Observation">
+      <packagedElement xmi:type="uml:Package" xmi:id="_TIQtwNRNEearFdKvR_8nWw" name="Observation">
+        <packagedElement xmi:type="uml:Collaboration" xmi:id="_TIMcUNRNEearFdKvR_8nWw" name="Observation">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TIVmQNRNEearFdKvR_8nWw" client="_TIMcUNRNEearFdKvR_8nWw" supplier="_TITxENRNEearFdKvR_8nWw" contract="_TITxENRNEearFdKvR_8nWw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TIeJINRNEearFdKvR_8nWw" client="_TIMcUNRNEearFdKvR_8nWw" supplier="_TIbF0NRNEearFdKvR_8nWw" contract="_TIbF0NRNEearFdKvR_8nWw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_TITxENRNEearFdKvR_8nWw" name="Observation"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_TIW0YNRNEearFdKvR_8nWw" name="Observation~">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_di784NRNEearFdKvR_8nWw" name="event">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XIa7ENROEearFdKvR_8nWw" name="data" type="_7UMxMN2YEeakB9CQglrL_g"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_TIZ3sNRNEearFdKvR_8nWw" client="_TIMcUNRNEearFdKvR_8nWw" supplier="_TIW0YNRNEearFdKvR_8nWw"/>
+        <packagedElement xmi:type="uml:AnyReceiveEvent" xmi:id="_TIaewNRNEearFdKvR_8nWw" name="*"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_TIbF0NRNEearFdKvR_8nWw" name="ObservationIO"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_TIewMNRNEearFdKvR_8nWw" client="_TIMcUNRNEearFdKvR_8nWw" supplier="_TIbF0NRNEearFdKvR_8nWw"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_eIzqENRNEearFdKvR_8nWw" operation="_di784NRNEearFdKvR_8nWw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_7RXxINRMEearFdKvR_8nWw" name="Observer" classifierBehavior="_JWCwUNROEearFdKvR_8nWw" isActive="true">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_kLF8oNRNEearFdKvR_8nWw" name="observation" visibility="public" type="_TIMcUNRNEearFdKvR_8nWw" isOrdered="true" aggregation="composite" isBehavior="true" isConjugated="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xL9SkN8cEeaATvleS4WKJg" value="20"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xLta8N8cEeaATvleS4WKJg" value="20"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_7_KOwNRNEearFdKvR_8nWw" name="log" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+          <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_6kIb0IeXEeSVyrlWP4nYew"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pJaLQNgzEeaqev0ObzxoAQ" name="config" visibility="public" type="_Rd5XMNg-Eeaqev0ObzxoAQ"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_JX_00NhDEeaqev0ObzxoAQ" name="timer" visibility="protected" isOrdered="true" aggregation="composite" isBehavior="true" isService="false">
+          <type xmi:type="uml:Collaboration" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_MxQZgGXsEeS_4daqvwyFrg"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_JWCwUNROEearFdKvR_8nWw" name="ObserverStateMachine" isReentrant="false">
+          <region xmi:type="uml:Region" xmi:id="_JWHo0NROEearFdKvR_8nWw" name="Region">
+            <transition xmi:type="uml:Transition" xmi:id="_JWPkoNROEearFdKvR_8nWw" name="configure" source="_JWJeANROEearFdKvR_8nWw" target="_JWMhUNROEearFdKvR_8nWw">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_2mliENgzEeaqev0ObzxoAQ">
+                <language>C++</language>
+                <body>config.load();&#xD;
+&#xD;
+// Socket&#xD;
+this->method = new ClientSocket();&#xD;
+this->method->configure(config.getConfigList());&#xD;
+this->method->establishConnection();&#xD;
+&#xD;
+// Text &#xD;
+this->serializer = new Text();&#xD;
+this->serializer->configure(config.getConfigList());&#xD;
+&#xD;
+// Instantiating the timer&#xD;
+timer.informEvery(UMLRTTimespec(0,500000000));</body>
+              </effect>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_RFMNUNROEearFdKvR_8nWw" source="_JWMhUNROEearFdKvR_8nWw" target="_JWMhUNROEearFdKvR_8nWw">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_elYb4NROEearFdKvR_8nWw">
+                <language>C++</language>
+                <body>    std::string str = this->serializer->serialize(data) + &quot;\n&quot;;
+    this->method->sendData(str);
+</body>
+              </effect>
+              <trigger xmi:type="uml:Trigger" xmi:id="_Ur9fsNROEearFdKvR_8nWw" event="_eIzqENRNEearFdKvR_8nWw" port="_kLF8oNRNEearFdKvR_8nWw"/>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_AIf_YNhDEeaqev0ObzxoAQ" name="read" source="_JWMhUNROEearFdKvR_8nWw" target="_JWMhUNROEearFdKvR_8nWw">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_WYUQgNhDEeaqev0ObzxoAQ">
+                <language>C++</language>
+                <body>    this->method->read();
+</body>
+              </effect>
+              <trigger xmi:type="uml:Trigger" xmi:id="_ZnQ4wNhDEeaqev0ObzxoAQ" port="_JX_00NhDEeaqev0ObzxoAQ">
+                <event xmi:type="uml:CallEvent" href="pathmap://UMLRTRTSLIB/UMLRT-RTS.uml#_IaEO8HDxEeSwWKwNKw1iAA"/>
+              </trigger>
+            </transition>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_JWJeANROEearFdKvR_8nWw">
+              <name xsi:nil="true"/>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_JWMhUNROEearFdKvR_8nWw" name="OBSERVING"/>
+          </region>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_YqQ6AN2eEeakB9CQglrL_g" name="internal">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_jS4zMNRWEearFdKvR_8nWw" name="Method" fileName=""/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_RDFEcNgzEeaqev0ObzxoAQ" name="Config" fileName=""/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Rd5XMNg-Eeaqev0ObzxoAQ" name="Config"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_dz_p0NhBEeaqev0ObzxoAQ" name="Serializer" fileName=""/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_qfz1INhBEeaqev0ObzxoAQ" name="Event" fileName=""/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_mKa0sN2QEea-l5c-PR3o_g" name="Socket" fileName=""/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_s9ec4N2QEea-l5c-PR3o_g" name="Socket"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_8821QN2REea-l5c-PR3o_g" name="Text" fileName=""/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-9cM8N2REea-l5c-PR3o_g" name="Text"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_7UMxMN2YEeakB9CQglrL_g" name="Event"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_It380N6xEeaXI8p9zQfKUQ" name="ClientSocket"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_PDk6oN6xEeaXI8p9zQfKUQ" name="ClientSocket" fileName=""/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rqpQsNRIEeayFZJ-SYgDzA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rqrF4NRIEeayFZJ-SYgDzA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_-yPMoNRIEearFdKvR_8nWw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-ygSYNRIEearFdKvR_8nWw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_-y8-UNRIEearFdKvR_8nWw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-y9lYNRIEearFdKvR_8nWw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+      </profileApplication>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_M9rCQMFeEeaVzb3gsu6Gyw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_M9v6wMFeEeaVzb3gsu6Gyw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/uml-rt.profile.uml#_1h74oEeVEeO0lv5O1DTHOQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_S5m1MMFeEeaVzb3gsu6Gyw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S5oDUMFeEeaVzb3gsu6Gyw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/cppproperties#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLRT_CPP/RTCppProperties.profile.uml#_vl5LALs8EeSTjNEQkASznQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_S5sUwMFeEeaVzb3gsu6Gyw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S5sUwcFeEeaVzb3gsu6Gyw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt/statemachine#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_RT_PROFILE/UMLRealTimeSM-addendum.profile.uml#_KLcn0FDtEeOA4ecmvfqvaw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__JGMMMFqEeaVzb3gsu6Gyw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__JGzQMFqEeaVzb3gsu6Gyw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLRealTime:Capsule xmi:id="_TzfqkMFeEeaVzb3gsu6Gyw" base_Class="_Tvla8MFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:Capsule xmi:id="_VhD_oMFeEeaVzb3gsu6Gyw" base_Class="_VgfX4MFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:Capsule xmi:id="_YsahUMFeEeaVzb3gsu6Gyw" base_Class="_Yr3HsMFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_b9fQgMFeEeaVzb3gsu6Gyw" base_Package="_b9a_EMFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:RTMessageSet xmi:id="_b9l-MMFeEeaVzb3gsu6Gyw" base_Interface="_b9hswMFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:RTMessageSet xmi:id="_b9t6AMFeEeaVzb3gsu6Gyw" base_Interface="_b9q2sMFeEeaVzb3gsu6Gyw" rtMsgKind="out"/>
+  <UMLRealTime:RTMessageSet xmi:id="_b9zZkMFeEeaVzb3gsu6Gyw" base_Interface="_b9w9UMFeEeaVzb3gsu6Gyw" rtMsgKind="inOut"/>
+  <UMLRealTime:Protocol xmi:id="_b93D8MFeEeaVzb3gsu6Gyw" base_Collaboration="_b9R1IMFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:RTPort xmi:id="_oazs0MFeEeaVzb3gsu6Gyw" base_Port="_oanfkMFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:RTPort xmi:id="_r5zjQMFeEeaVzb3gsu6Gyw" base_Port="_r5uDsMFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:CapsulePart xmi:id="_t3TKsMFeEeaVzb3gsu6Gyw" base_Property="_t3O5QMFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:CapsulePart xmi:id="_uwjG4MFeEeaVzb3gsu6Gyw" base_Property="_uwfcgMFeEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:RTConnector xmi:id="_xwg38MFeEeaVzb3gsu6Gyw" base_Connector="_xwZjMMFeEeaVzb3gsu6Gyw"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_HflzgMFfEeaVzb3gsu6Gyw" base_Pseudostate="_HfhiEMFfEeaVzb3gsu6Gyw"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_Hf25QMFfEeaVzb3gsu6Gyw" base_Region="_HfbbcMFfEeaVzb3gsu6Gyw"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_HgUzUMFfEeaVzb3gsu6Gyw" base_StateMachine="_HfQcUMFfEeaVzb3gsu6Gyw"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_SYP_IMFfEeaVzb3gsu6Gyw" base_Pseudostate="_SYNi4MFfEeaVzb3gsu6Gyw"/>
+  <UMLRTStateMachines:RTState xmi:id="_SYTCcMFfEeaVzb3gsu6Gyw" base_State="_SYRNQMFfEeaVzb3gsu6Gyw"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_SYUQkMFfEeaVzb3gsu6Gyw" base_Region="_SYLGoMFfEeaVzb3gsu6Gyw"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_SYxjkMFfEeaVzb3gsu6Gyw" base_StateMachine="_SYFAAMFfEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:RTPort xmi:id="_GZ8koMFgEeaVzb3gsu6Gyw" isWired="false" base_Port="_GZ4TMMFgEeaVzb3gsu6Gyw"/>
+  <UMLRealTime:RTPort xmi:id="_Dk9CkMFiEeaVzb3gsu6Gyw" isWired="false" base_Port="_Dk4xIMFiEeaVzb3gsu6Gyw"/>
+  <RTCppProperties:PassiveClassProperties xmi:id="_AwT4wN2SEea-l5c-PR3o_g" base_Class="_-9cM8N2REea-l5c-PR3o_g" generate="false"/>
+  <RTCppProperties:ArtifactProperties xmi:id="_oM3NkN2QEea-l5c-PR3o_g" base_Artifact="_mKa0sN2QEea-l5c-PR3o_g" includeFile="#include &quot;Method.hh&quot;&#xD;&#xA;#include &lt;string>&#xD;&#xA;#include &lt;stdlib.h>&#xD;&#xA;#include &lt;unistd.h>&#xD;&#xA;#include &lt;sys/types.h>&#xD;&#xA;#include &lt;sys/socket.h>&#xD;&#xA;#include &lt;netinet/in.h>&#xD;&#xA;#include &lt;arpa/inet.h>&#xD;&#xA;#include &lt;netdb.h>&#xD;&#xA;&#xD;&#xA;class Socket : public Method {&#xD;&#xA;&#xD;&#xA;    private:&#xD;&#xA;        int port;&#xD;&#xA;        std::string address;&#xD;&#xA;&#xD;&#xA;        fd_set master;    // master file descriptor list&#xD;&#xA;        fd_set read_fds;  // temp file descriptor list for select()&#xD;&#xA;        int fdmax;        // maximum file descriptor number&#xD;&#xA;&#xD;&#xA;        int listener;     // listening socket descriptor&#xD;&#xA;        struct sockaddr_storage remoteaddr; // client address&#xD;&#xA;        socklen_t addrlen;&#xD;&#xA;&#xD;&#xA;        char remoteIP[INET6_ADDRSTRLEN];&#xD;&#xA;&#xD;&#xA;        struct timeval tv;&#xD;&#xA;&#xD;&#xA;    public:&#xD;&#xA;        Socket();&#xD;&#xA;        virtual ~Socket();&#xD;&#xA;        virtual void configure(std::map&lt;std::string, std::string> configList);&#xD;&#xA;        virtual const bool canConnect() const;&#xD;&#xA;        virtual int establishConnection();&#xD;&#xA;        virtual void disconnect();&#xD;&#xA;        virtual void read();&#xD;&#xA;        virtual void sendData(std::string data);&#xD;&#xA;&#xD;&#xA;        const int getPort() const;&#xD;&#xA;        void setPort(const int port);&#xD;&#xA;&#xD;&#xA;        const std::string getAddress() const;&#xD;&#xA;        void setAddress(const std::string address);&#xD;&#xA;};&#xD;&#xA;" sourceFile="#include &lt;stdio.h>&#xD;&#xA;#include &lt;stdlib.h>&#xD;&#xA;#include &lt;string.h>&#xD;&#xA;#include &lt;unistd.h>&#xD;&#xA;#include &lt;sys/types.h>&#xD;&#xA;#include &lt;sys/socket.h>&#xD;&#xA;#include &lt;netinet/in.h>&#xD;&#xA;#include &lt;arpa/inet.h>&#xD;&#xA;#include &lt;netdb.h>&#xD;&#xA;#include &lt;sstream>&#xD;&#xA;&#xD;&#xA;// get sockaddr, IPv4 or IPv6:&#xD;&#xA;void *get_in_addr(struct sockaddr *sa)&#xD;&#xA;{&#xD;&#xA;    if (sa->sa_family == AF_INET) {&#xD;&#xA;        return &amp;(((struct sockaddr_in*)sa)->sin_addr);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    return &amp;(((struct sockaddr_in6*)sa)->sin6_addr);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Socket::Socket() : Method() {&#xD;&#xA;    this->setPort(8080);&#xD;&#xA;    this->setAddress(&quot;localhost&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;Socket::~Socket() {&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void Socket::configure(std::map&lt;std::string, std::string> configList) {&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    std::string port, address;&#xD;&#xA;    port = this->getConfig(configList, &quot;port&quot;);&#xD;&#xA;    address = this->getConfig(configList, &quot;address&quot;);&#xD;&#xA;&#xD;&#xA;    if (!port.empty())&#xD;&#xA;        this->setPort(atoi(port.c_str()));&#xD;&#xA;&#xD;&#xA;    if (!address.empty())&#xD;&#xA;        this->setAddress(address);&#xD;&#xA;&#xD;&#xA;    printf(&quot;address: %s, port: %d\n&quot;, getAddress().c_str(), getPort());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;const bool Socket::canConnect() const {&#xD;&#xA;    return true;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;int Socket::establishConnection() {&#xD;&#xA;&#xD;&#xA;    int rv, result = -1;&#xD;&#xA;    struct addrinfo hints, *ai, *p;&#xD;&#xA;    int yes = 1;   // for setsockopt&#xD;&#xA;&#xD;&#xA;&#x9;std::stringstream port;&#xD;&#xA;&#x9;port &lt;&lt; this->getPort();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    tv.tv_sec = 0;&#xD;&#xA;    tv.tv_usec = 0;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    FD_ZERO(&amp;master);    // clear the master and temp sets&#xD;&#xA;    FD_ZERO(&amp;read_fds);&#xD;&#xA;&#xD;&#xA;    // get us a socket and bind it&#xD;&#xA;    memset(&amp;hints, 0, sizeof hints);&#xD;&#xA;    hints.ai_family = AF_UNSPEC;&#xD;&#xA;    hints.ai_socktype = SOCK_STREAM;&#xD;&#xA;    hints.ai_flags = AI_PASSIVE;&#xD;&#xA;    if ((rv = getaddrinfo(NULL, port.str().c_str(), &amp;hints, &amp;ai)) != 0) {&#xD;&#xA;        fprintf(stderr, &quot;selectserver: %s\n&quot;, gai_strerror(rv));&#xD;&#xA;        exit(1);&#xD;&#xA;    }&#xD;&#xA;    &#xD;&#xA;    for(p = ai; p != NULL; p = p->ai_next) {&#xD;&#xA;        listener = socket(p->ai_family, p->ai_socktype, p->ai_protocol);&#xD;&#xA;        if (listener &lt; 0) { &#xD;&#xA;            continue;&#xD;&#xA;        }&#xD;&#xA;        &#xD;&#xA;        // lose the pesky &quot;address already in use&quot; error message&#xD;&#xA;        setsockopt(listener, SOL_SOCKET, SO_REUSEADDR, &amp;yes, sizeof(int));&#xD;&#xA;&#xD;&#xA;        if (bind(listener, p->ai_addr, p->ai_addrlen) &lt; 0) {&#xD;&#xA;            close(listener);&#xD;&#xA;            continue;&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;        break;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    // if we got here, it means we didn't get bound&#xD;&#xA;    if (p == NULL) {&#xD;&#xA;        fprintf(stderr, &quot;selectserver: failed to bind\n&quot;);&#xD;&#xA;        exit(2);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    freeaddrinfo(ai); // all done with this&#xD;&#xA;&#xD;&#xA;    // listen&#xD;&#xA;    if (listen(listener, 10) == -1) {&#xD;&#xA;        perror(&quot;listen&quot;);&#xD;&#xA;        exit(3);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    // add the listener to the master set&#xD;&#xA;    FD_SET(listener, &amp;master);&#xD;&#xA;&#xD;&#xA;    // keep track of the biggest file descriptor&#xD;&#xA;    fdmax = listener; // so far, it's this one&#xD;&#xA;&#xD;&#xA;    return result;&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void Socket::disconnect() {&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void Socket::read() {&#xD;&#xA;&#xD;&#xA;    // main loop&#xD;&#xA;    read_fds = master; // copy it&#xD;&#xA;    int rc = select(fdmax+1, &amp;read_fds, NULL, NULL, &amp;tv); &#xD;&#xA;    if (rc == -1) {&#xD;&#xA;        perror(&quot;select&quot;);&#xD;&#xA;        exit(4);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    tv.tv_sec = 0;&#xD;&#xA;    tv.tv_usec = 0;&#xD;&#xA;&#xD;&#xA;    if (rc == 0) {&#xD;&#xA;     //   printf(&quot;timeout\n&quot;);&#xD;&#xA;        return;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    int i = 0;&#xD;&#xA;&#xD;&#xA;    // run through the existing connections looking for data to read&#xD;&#xA;    for(i = 0; i &lt;= fdmax; i++) {&#xD;&#xA;        if (FD_ISSET(i, &amp;read_fds)) { // we got one!!&#xD;&#xA;            if (i == listener) {&#xD;&#xA;                // handle new connections&#xD;&#xA;                addrlen = sizeof remoteaddr;&#xD;&#xA;                int newfd = accept(listener,&#xD;&#xA;                    (struct sockaddr *)&amp;remoteaddr,&#xD;&#xA;                    &amp;addrlen);&#xD;&#xA;&#xD;&#xA;                char remoteIP[INET6_ADDRSTRLEN];&#xD;&#xA;&#xD;&#xA;                if (newfd == -1) {&#xD;&#xA;                    perror(&quot;accept&quot;);&#xD;&#xA;                } else {&#xD;&#xA;                    FD_SET(newfd, &amp;master); // add to master set&#xD;&#xA;                    if (newfd > fdmax) {    // keep track of the max&#xD;&#xA;                        fdmax = newfd;&#xD;&#xA;                    }&#xD;&#xA;                    printf(&quot;new connection from %s on &quot;&#xD;&#xA;                        &quot;socket %d\n&quot;,&#xD;&#xA;                        inet_ntop(remoteaddr.ss_family,&#xD;&#xA;                            get_in_addr((struct sockaddr*)&amp;remoteaddr),&#xD;&#xA;                            remoteIP, INET6_ADDRSTRLEN),&#xD;&#xA;                        newfd);&#xD;&#xA;                }&#xD;&#xA;            } else {&#xD;&#xA;                char buf[256];    // buffer for client data&#xD;&#xA;                int nbytes;&#xD;&#xA;                // handle data from a client&#xD;&#xA;                if ((nbytes = recv(i, buf, sizeof buf, 0)) &lt;= 0) {&#xD;&#xA;                    // got error or connection closed by client&#xD;&#xA;                    if (nbytes == 0) {&#xD;&#xA;                        // connection closed&#xD;&#xA;                        printf(&quot;socket %d hung up\n&quot;, i);&#xD;&#xA;                    } else {&#xD;&#xA;                        perror(&quot;recv&quot;);&#xD;&#xA;                    }&#xD;&#xA;                    close(i); // bye!&#xD;&#xA;                    FD_CLR(i, &amp;master); // remove from master set&#xD;&#xA;                } else {&#xD;&#xA;                //    printf(&quot;new data: %s\n&quot;, buf);&#xD;&#xA;                //    // we got some data from a client&#xD;&#xA;                //    int j = 0;&#xD;&#xA;                //    for(j = 0; j &lt;= fdmax; j++) {&#xD;&#xA;                //        // send to everyone!&#xD;&#xA;                //        if (FD_ISSET(j, &amp;master)) {&#xD;&#xA;                //            // except the listener and ourselves&#xD;&#xA;                //            if (j != listener &amp;&amp; j != i) {&#xD;&#xA;                //                if (send(j, buf, nbytes, 0) == -1) {&#xD;&#xA;                //                    perror(&quot;send&quot;);&#xD;&#xA;                //                }&#xD;&#xA;                //            }&#xD;&#xA;                //        }&#xD;&#xA;                //    }&#xD;&#xA;                }&#xD;&#xA;            } // END handle data from client&#xD;&#xA;        } // END got new incoming connection&#xD;&#xA;    } // END looping through file descriptors&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void Socket::sendData(std::string data) {&#xD;&#xA;    int j = 0;&#xD;&#xA;    for(j = 0; j &lt;= fdmax; j++) {&#xD;&#xA;        // send to everyone&#xD;&#xA;        if (FD_ISSET(j, &amp;master)) {&#xD;&#xA;            // no exception&#xD;&#xA;            if (j != listener) {&#xD;&#xA;                if (write(j, data.c_str(), data.length()) == -1) {&#xD;&#xA;                //    perror(&quot;does not work\n&quot;);&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;const int Socket::getPort() const {&#xD;&#xA;    return this->port;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void Socket::setPort(const int port) {&#xD;&#xA;    this->port = port;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;const std::string Socket::getAddress() const {&#xD;&#xA;    return this->address;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void Socket::setAddress(const std::string address) {&#xD;&#xA;    this->address = address;&#xD;&#xA;}"/>
+  <UMLRealTime:RTPort xmi:id="_kLI_8NRNEearFdKvR_8nWw" isPublish="true" isWired="false" base_Port="_kLF8oNRNEearFdKvR_8nWw"/>
+  <RTCppProperties:PassiveClassProperties xmi:id="_8Y5IYN2YEeakB9CQglrL_g" base_Class="_7UMxMN2YEeakB9CQglrL_g" generate="false"/>
+  <RTCppProperties:PassiveClassProperties xmi:id="_TsXZ4Ng-Eeaqev0ObzxoAQ" base_Class="_Rd5XMNg-Eeaqev0ObzxoAQ" generate="false"/>
+  <RTCppProperties:ArtifactProperties xmi:id="_fqkJ4NhBEeaqev0ObzxoAQ" base_Artifact="_dz_p0NhBEeaqev0ObzxoAQ" includeFile="#include &lt;map>&#xA;#include &lt;string>&#xA;#include &quot;Event.hh&quot;&#xA;&#xA;class Serializer {&#xA;&#xA;    public:&#xA;        Serializer();&#xA;        virtual ~Serializer();&#xA;        virtual void configure(std::map&lt;std::string, std::string> configList) = 0;&#xA;        virtual const std::string serialize(const Event event) const = 0;&#xA;        virtual Event parse(const std::string data) const = 0;&#xA;        virtual const std::string getConfig(std::map&lt;std::string, std::string> configList, std::string key) const;&#xA;};" sourceFile="Serializer::Serializer() {&#xA;}&#xA;&#xA;Serializer::~Serializer() {&#xA;}&#xA;&#xA;const std::string Serializer::getConfig(std::map&lt;std::string, std::string> configList, std::string key) const {&#xA;&#x9;bool n = configList.count(key);&#xA;&#x9;return (n) ? configList.at(key) : &quot;&quot;;&#xA;}"/>
+  <UMLRTStateMachines:RTStateMachine xmi:id="_JXT7oNROEearFdKvR_8nWw" base_StateMachine="_JWCwUNROEearFdKvR_8nWw"/>
+  <UMLRealTime:Protocol xmi:id="_TIfXQNRNEearFdKvR_8nWw" base_Collaboration="_TIMcUNRNEearFdKvR_8nWw"/>
+  <UMLRealTime:ProtocolContainer xmi:id="_TISi8NRNEearFdKvR_8nWw" base_Package="_TIQtwNRNEearFdKvR_8nWw"/>
+  <UMLRealTime:RTMessageSet xmi:id="_TIU_MNRNEearFdKvR_8nWw" base_Interface="_TITxENRNEearFdKvR_8nWw"/>
+  <UMLRTStateMachines:RTState xmi:id="_JWO9kNROEearFdKvR_8nWw" base_State="_JWMhUNROEearFdKvR_8nWw"/>
+  <RTCppProperties:PassiveClassProperties xmi:id="_urzm8N2QEea-l5c-PR3o_g" base_Class="_s9ec4N2QEea-l5c-PR3o_g" generate="false"/>
+  <UMLRealTime:RTPort xmi:id="_7_N5INRNEearFdKvR_8nWw" isWired="false" base_Port="_7_KOwNRNEearFdKvR_8nWw"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_JWL6QNROEearFdKvR_8nWw" base_Pseudostate="_JWJeANROEearFdKvR_8nWw"/>
+  <RTCppProperties:ArtifactProperties xmi:id="_sc2JkNhBEeaqev0ObzxoAQ" base_Artifact="_qfz1INhBEeaqev0ObzxoAQ" includeFile="#include &lt;map>&#xA;#include &lt;iostream>&#xA;#include &lt;string.h>&#xA;#include &lt;sstream>&#xA;#include &lt;stdio.h>&#xA;#include &lt;stdlib.h>&#xA;#include &lt;vector>&#xA;#include &quot;umlrtobjectclass.hh&quot;&#xA;&#xA;&#xA;class Event {&#xA;&#xA;&#xA;&#xA;    public:&#xA;        typedef enum {&#xA;            Signal, Method, ActionCode, Transition, State, Capsule, Attribute, Timer, UnknownSource&#xA;        } EventSource; &#xA;&#xA;        typedef enum {&#xA;            SendSignal, ReceiveSignal, DeferSignal, RecallSignal, CancelSignal, // Signal events&#xA;            MethodCall, MethodCallReceive, MethodStartExecute, MethodReturn, MethodFailed, MethodReturnReceived, // Method events&#xA;            ActionStart, ActionEnd, // Action code events&#xA;            TransitionStart, TransitionEnd, // Transition events&#xA;            StateEntryStart, StateEntryEnd, StateExitStart, StateExitEnd, StateIdleStart, StateIdleEnd, // State events&#xA;            CapsuleInstantiate, CapsuleFree, // Capsule events&#xA;            AttributeInstantiate, AttributeFree, AttributeChange, // Attribute events&#xA;            TimerStart, TimerSet, TimerCancel, TimerTimeout, // Timer events&#xA;            UnknownKind&#xA;        } EventKind;&#xA;&#xA;    private:&#xA;        std::string capsuleInstance;&#xA;        std::string sourceName;&#xA;        std::string eventId;&#xA;        long seconds;&#xA;        long nanoseconds;&#xA;        EventSource eventSource;&#xA;        EventKind eventKind;&#xA;        std::map&lt;std::string, std::string> params;&#xA;&#xA;    public:&#xA;        Event(std::string capsuleInstance = &quot;&quot;,&#xA;              std::string sourceName = &quot;&quot;,&#xA;              EventSource eventSource = UnknownSource,&#xA;              EventKind eventKind = UnknownKind,&#xA;              long seconds = 0,&#xA;              long nanoseconds = 0);&#xA;        const std::string getCapsuleInstance() const;&#xA;        void setCapsuleInstance(const std::string capsuleInstance);&#xA;        const std::string getSourceName() const;&#xA;        void setSourceName(const std::string sourceName);&#xA;        const EventSource getEventSource() const;&#xA;        void setEventSource(const Event::EventSource source);&#xA;        const EventKind getEventKind() const;&#xA;        void setEventKind(const Event::EventKind kind);&#xA;        const long getSeconds() const;&#xA;        const long getNanoseconds() const;&#xA;        void setTimestamp();&#xA;        void setTimestamp(const long seconds, const long nanoseconds = 0);&#xA;        void setSeconds(const long seconds);&#xA;        void setNanoseconds(const long nanoseconds = 0);&#xA;        void setEventId(const std::string eventId);&#xA;        const std::string getEventId() const;&#xA;        void generateEventId();&#xA;        const std::map&lt;std::string, std::string> getParams() const;&#xA;        const std::string getParam(std::string key) const;&#xA;        void setParams(const std::map&lt;std::string, std::string> params);&#xA;        void setParam(const  std::string key, const std::string value);&#xA;&#x9;void setParam(const  std::string key, const int value);&#xA;        void clearParams();&#xA;&#x9;static const UMLRTObject_field fields[];&#xA;};&#xA;&#xA;extern const UMLRTObject_class UMLRTType_Event;&#xA;" sourceFile="#include &lt;string>&#xA;#include &lt;sstream>&#xA;#include &lt;time.h>&#xA;#include &lt;sys/time.h>&#xA;#include &lt;stdio.h>&#xA;#include &lt;stdlib.h>&#xA;#include &quot;umlrtobjectclass.hh&quot;&#xA;#include &quot;umlrtobjectclassgeneric.hh&quot;&#xA;&#xA;const UMLRTObject_field Event::fields[] = &#xA;{&#xA;};&#xA;&#xA;&#xA;&#xA;Event::Event(std::string capsuleInstance,&#xA;      std::string sourceName,&#xA;      EventSource eventSource,&#xA;      EventKind eventKind,&#xA;      long seconds,&#xA;      long nanoseconds) {&#xA;&#xA;    this->generateEventId();&#xA;    this->setCapsuleInstance(capsuleInstance);&#xA;    this->setSourceName(sourceName);&#xA;    this->setEventSource(eventSource);&#xA;    this->setEventKind(eventKind);&#xA;}&#xA;&#xA;const std::string Event::getCapsuleInstance() const {&#xA;    return this->capsuleInstance;&#xA;}&#xA;&#xA;void Event::setCapsuleInstance(const std::string capsuleInstance) {&#xA;    this->capsuleInstance = capsuleInstance;&#xA;}&#xA;&#xA;const std::string Event::getSourceName() const {&#xA;    return this->sourceName;&#xA;}&#xA;&#xA;void Event::setSourceName(const std::string sourceName) {&#xA;    this->sourceName = sourceName;&#xA;}&#xA;&#xA;const Event::EventSource Event::getEventSource() const {&#xA;    return this->eventSource;&#xA;}&#xA;&#xA;void Event::setEventSource(const Event::EventSource source) {&#xA;    this->eventSource = source;&#xA;}&#xA;&#xA;const Event::EventKind Event::getEventKind() const {&#xA;    return this->eventKind;&#xA;}&#xA;&#xA;void Event::setEventKind(const Event::EventKind kind) {&#xA;    this->eventKind = kind;&#xA;}&#xA;&#xA;const long Event::getSeconds() const {&#xA;    return this->seconds;&#xA;}&#xA;&#xA;const long Event::getNanoseconds() const {&#xA;    return this->nanoseconds;&#xA;}&#xA;&#xA;void Event::setTimestamp() {&#xA;&#xA;    long seconds, nanoseconds;&#xA;&#xA;    struct timeval tp;&#xA;    gettimeofday(&amp;tp, NULL);&#xA;&#xA;    seconds = tp.tv_sec;&#xA;    nanoseconds = tp.tv_usec * 1000;&#xA;&#xA;    this->setTimestamp(seconds, nanoseconds);&#xA;&#xA;}&#xA;&#xA;void Event::setTimestamp(const long seconds, const long nanoseconds) {&#xA;    setSeconds(seconds);&#xA;    this->setNanoseconds(nanoseconds);&#xA;    this->seconds = seconds;&#xA;    this->nanoseconds = nanoseconds;&#xA;}&#xA;&#xA;void Event::setSeconds(const long seconds) {&#xA;    this->seconds = seconds;&#xA;}&#xA;void Event::setNanoseconds(const long nanoseconds) {&#xA;    this->nanoseconds = nanoseconds;&#xA;}&#xA;&#xA;const std::string Event::getEventId() const {&#xA;    return this->eventId;&#xA;}&#xA;&#xA;void Event::setEventId(const std::string eventId) {&#xA;    this->eventId = eventId;&#xA;}&#xA;&#xA;void Event::generateEventId() {&#xA;&#xA;    long seconds, nanoseconds;&#xA;&#xA;    struct timeval tp;&#xA;    gettimeofday(&amp;tp, NULL);&#xA;&#xA;    seconds = tp.tv_sec;&#xA;    nanoseconds = tp.tv_usec * 1000;&#xA;&#xA;    std::stringstream ss;&#xA;    int r;&#xA;    r=random();&#xA;&#xA;    ss &lt;&lt; seconds &lt;&lt; nanoseconds &lt;&lt; r;&#xA;    this->eventId = ss.str();&#xA;}&#xA;&#xA;const std::map&lt;std::string, std::string> Event::getParams() const {&#xA;        return params;&#xA;}&#xA;&#xA;const std::string Event::getParam(std::string key) const {&#xA;    bool n = this->params.count(key);&#xA;    return (n) ? this->params.at(key) : &quot;&quot;;&#xA;}&#xA;&#xA;void Event::setParams(const  std::map&lt;std::string, std::string> params) {&#xA;        this->params = params;&#xA;}&#xA;&#xA;void Event::setParam(const  std::string key, const std::string value) {&#xA;    if (key.length() >= 1)&#xA;        this->params[key] = value;&#xA;}&#xA;&#xA;void Event::setParam(const  std::string key, const int value) {&#xA;    std::stringstream v;&#xA;    v &lt;&lt; value;&#xA;    this->setParam(key, v.str());&#xA;}&#xA;&#xA;void Event::clearParams() {&#xA;    this->params.clear();&#xA;}&#xA;&#xA;const UMLRTObject_class UMLRTType_Event = &#xA;{&#xA;    UMLRTObjectInitialize&lt;Event>,&#xA;    UMLRTObjectCopy&lt;Event>,&#xA;    UMLRTObject_decode,&#xA;    UMLRTObject_encode,&#xA;    UMLRTObjectDestroy&lt;Event>,&#xA;    UMLRTObject_fprintf,&#xA;    &quot;Event&quot;,&#xA;    NULL,&#xA;    {&#xA;        sizeof( Event ),&#xA;        0,&#xA;        Event::fields&#xA;    },&#xA;    UMLRTOBJECTCLASS_DEFAULT_VERSION,&#xA;    UMLRTOBJECTCLASS_DEFAULT_BACKWARDS&#xA;};"/>
+  <UMLRealTime:RTPort xmi:id="_JYIXsNhDEeaqev0ObzxoAQ" isWired="false" base_Port="_JX_00NhDEeaqev0ObzxoAQ"/>
+  <UMLRealTime:Capsule xmi:id="_7Sjc49RMEearFdKvR_8nWw" base_Class="_7RXxINRMEearFdKvR_8nWw"/>
+  <RTCppProperties:CapsuleProperties xmi:id="_rFjo0NRXEearFdKvR_8nWw" headerPreface="#include &quot;Method.hh&quot;&#xD;&#xA;#include &quot;Socket.hh&quot;&#xD;&#xA;#include &quot;ClientSocket.hh&quot;&#xD;&#xA;#include &quot;Serializer.hh&quot;&#xD;&#xA;#include &quot;Text.hh&quot;" base_Class="_7RXxINRMEearFdKvR_8nWw" privateDeclarations="Method* method;&#xA;Serializer* serializer;"/>
+  <RTCppProperties:ArtifactProperties xmi:id="_b0D0sNRXEearFdKvR_8nWw" base_Artifact="_jS4zMNRWEearFdKvR_8nWw" includeFile="#include &lt;map>&#xD;&#xA;#include &lt;string>&#xD;&#xA;&#xD;&#xA;class Method {&#xD;&#xA;&#xD;&#xA;    public:&#xD;&#xA;        Method();&#xD;&#xA;        virtual ~Method();&#xD;&#xA;        virtual void configure(std::map&lt;std::string, std::string> configList) = 0;&#xD;&#xA;        virtual const bool canConnect() const;&#xD;&#xA;        virtual int establishConnection() = 0;&#xD;&#xA;        virtual void disconnect() = 0;&#xD;&#xA;        virtual void read() = 0;&#xD;&#xA;        virtual void sendData(std::string) = 0;&#xD;&#xA;        virtual const std::string getConfig(std::map&lt;std::string, std::string> configList, std::string key) const;&#xD;&#xA;};" sourceFile="#include &lt;stdio.h>&#xA;&#xA;Method::Method() {&#xA;}&#xA;&#xA;Method::~Method() {&#xA;}&#xA;&#xA;const bool Method::canConnect() const {&#xA;    return false;&#xA;}&#xA;&#xA;const std::string Method::getConfig(std::map&lt;std::string, std::string> configList, std::string key) const {&#xA;&#x9;bool n = configList.count(key);&#xA;&#x9;return (n) ? configList.at(key) : &quot;&quot;;&#xA;}"/>
+  <UMLRealTime:RTMessageSet xmi:id="_TIc7ANRNEearFdKvR_8nWw" base_Interface="_TIbF0NRNEearFdKvR_8nWw" rtMsgKind="inOut"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_JWQLsNROEearFdKvR_8nWw" base_Region="_JWHo0NROEearFdKvR_8nWw"/>
+  <RTCppProperties:ArtifactProperties xmi:id="_ZmRNgNgzEeaqev0ObzxoAQ" base_Artifact="_RDFEcNgzEeaqev0ObzxoAQ" includeFile="#include &lt;string>&#xA;#include &lt;map>&#xA;&#xA;class Config {&#xA;&#xA;    private:&#xA;        std::string configFileName;&#xA;        std::string fieldSeparator;&#xA;        std::string commentStr;&#xA;        std::string getConfigPath();&#xA;&#x9;&#x9;std::map&lt;std::string,std::string> configList;&#xA;&#xA;    public:&#xA;        Config();&#xA;        ~Config();&#xA;        int load();&#xA;&#x9;&#x9;void append(std::string key, std::string value);&#xA;&#x9;&#x9;std::string get(std::string key);&#xA;        void setConfigFileName(const std::string configFileName);&#xA;        const std::string getConfigFileName() const;&#xA;&#xA;        void setFieldSeparator(const std::string fieldSeparator);&#xA;        const std::string getFieldSeparator() const;&#xA;&#xA;        void setCommentStr(const std::string commentStr);&#xA;        const std::string getCommentStr() const;&#xA;&#xA;&#x9;&#x9;const std::map&lt;std::string,std::string> getConfigList() const;&#xA;};" sourceFile="#include &lt;stdio.h>&#xA;#include &lt;fstream>&#xA;#include &lt;iostream>&#xA;#include &lt;unistd.h>&#xA;&#xA;using namespace std;&#xA;&#xA;Config::Config() {&#xA;    this->setConfigFileName(&quot;config&quot;);&#xA;    this->setFieldSeparator(&quot;=&quot;);&#xA;    this->setCommentStr(&quot;#&quot;);&#xA;}&#xA;&#xA;Config::~Config() {&#xA;}&#xA;&#xA;int Config::load() {&#xA;&#xA;    int result = 0;&#xA;    std::string prefix = &quot;&quot;;&#xA;    std::string configPath = this->getConfigPath();&#xA;    std::ifstream configFile(configPath.c_str());&#xA;    std::string line;&#xA;&#xA;    if (configFile.is_open()) {&#xA;        while (std::getline(configFile, line)) {&#xA;&#xA;&#x9;&#x9;&#x9;std::string key, value;&#xA;&#xA;            // skip the space and comment line&#xA;            std::string::size_type nonSpaceCharIndex = line.find_first_not_of(&quot; \f\t\v&quot;);&#xA;&#x9;&#x9;&#x9;if (nonSpaceCharIndex == std::string::npos)&#xA;&#x9;&#x9;&#x9;&#x9;continue; // line is empty, skp it&#xA;&#xA;&#x9;&#x9;&#x9;if (this->commentStr.find(line[nonSpaceCharIndex]) != std::string::npos)&#xA;&#x9;&#x9;&#x9;&#x9;continue; // skip the line , it is a comment line&#xA;&#xA;            // Check if it is a definition of a specific rule&#xA;            std::string::size_type prefixIndex = line.find(&quot;[&quot;, nonSpaceCharIndex);&#xA;            if (prefixIndex != std::string::npos) {&#xA;&#xA;                std::string::size_type valueNonSpaceCharIndex = line.find_first_not_of(&quot; \f\t\v&quot;, prefixIndex + 1);&#xA;                std::string p = line.substr(valueNonSpaceCharIndex);&#xA;                p.erase(p.find_last_not_of(&quot; \f\t\v&quot;));&#xA;                p.erase(p.find_last_not_of(&quot; \f\t\v&quot;) + 1);&#xA;                prefix = p;&#xA;                continue;&#xA;&#x9;&#x9;&#x9;}&#xA;            &#xA;&#x9;&#x9;&#x9;// extract key value&#xA;&#x9;&#x9;&#x9;std::string::size_type sepIndex = line.find(this->getFieldSeparator(), nonSpaceCharIndex);&#xA;&#x9;&#x9;&#x9;if (sepIndex == std::string::npos)&#xA;&#x9;&#x9;&#x9;&#x9;continue; // the line doesn't contain the seperator&#xA;&#xA;&#x9;&#x9;&#x9;key = line.substr(nonSpaceCharIndex, sepIndex - nonSpaceCharIndex);&#xA;&#x9;&#x9;&#x9;key.erase(key.find_last_not_of(&quot; \f\t\v&quot;) + 1);&#xA;&#xA;&#x9;&#x9;&#x9;if (key.empty())&#xA;&#x9;&#x9;&#x9;&#x9;continue; // the kwy should have value&#xA;&#xA;            if (sepIndex + 1 == line.length())&#xA;                continue; // there is no value&#xA;&#xA;&#x9;&#x9;&#x9;/// extract the value&#xA;&#x9;&#x9;&#x9;std::string::size_type valueNonSpaceCharIndex = line.find_first_not_of(&quot; \f\t\v&quot;, sepIndex + 1);&#xA;&#xA;            if (valueNonSpaceCharIndex == std::string::npos)&#xA;                continue; // there is no value&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;std::string::size_type valueLastNonSpaceCharIndex = line.find_last_not_of(&quot; \f\t\v&quot;);&#xA;&#x9;&#x9;&#x9;value = line.substr(valueNonSpaceCharIndex, valueLastNonSpaceCharIndex - valueNonSpaceCharIndex + 1);&#xA;            if (!prefix.empty())&#xA;                key = prefix + &quot;.&quot; + key;&#xA;&#x9;&#x9;&#x9;this->append(key,value);&#xA;            printf(&quot;%s=%s\n&quot;, key.c_str(), value.c_str());&#xA;&#x9;&#x9;&#x9;result = result + 1;&#xA;        }&#xA;    }&#xA;    else {&#xA;    //    std::cerr &lt;&lt; &quot;Error in reading configuration file from &quot; &lt;&lt; configPath &lt;&lt; std::endl;&#xA;        result=-1;&#xA;    }&#xA;&#x9;configFile.close();&#xA;    return result;&#xA;}&#xA;&#xA;void Config::append(std::string key, std::string value) {&#xA;&#x9;if (!key.empty())&#xA;&#x9;&#x9;this->configList[key] = value;&#xA;}&#xA;&#xA;std::string Config::get(std::string key) {&#xA;&#x9;bool n = this->configList.count(key);&#xA;&#x9;return (n) ? this->configList.at(key) : &quot;&quot;;&#xA;}&#xA;&#xA;/**&#xA; * Resolve the full path from the exec path&#xA; */&#xA;std::string Config::getConfigPath() {&#xA;&#xA;&#x9;char result[255];&#xA;    std::string path;&#xA;&#xA;&#x9;readlink(&quot;/proc/self/exe&quot;, result, 255);&#xA;&#x9;path = std::string(result);&#xA;&#xA;    // find the last &quot;/&quot; position&#xA;&#x9;size_t n = path.rfind('/');&#xA;&#xA;    // remove the last fragment of the path&#xA;    path = (n > 0) ? path.substr(0, n) : &quot;&quot;;&#xA;&#xA;    // return the full path&#xA;    return (path != &quot;&quot;) ? path + &quot;/&quot; + this->configFileName : this->configFileName;&#xA;}&#xA;&#xA;void Config::setConfigFileName(const std::string configFileName) {&#xA;    this->configFileName = configFileName;&#xA;}&#xA;&#xA;const std::string Config::getConfigFileName() const {&#xA;    return this->configFileName;&#xA;}&#xA;&#xA;void Config::setFieldSeparator(const std::string fieldSeparator) {&#xA;    this->fieldSeparator = fieldSeparator;&#xA;}&#xA;&#xA;const std::string Config::getFieldSeparator() const {&#xA;    return this->fieldSeparator;&#xA;}&#xA;&#xA;&#xA;void Config::setCommentStr(const std::string commentStr) {&#xA;    this->commentStr = commentStr;&#xA;}&#xA;&#xA;const std::string Config::getCommentStr() const {&#xA;    return this->commentStr;&#xA;}&#xA;&#xA;const std::map&lt;std::string,std::string> Config::getConfigList() const {&#xA;&#x9;return this->configList;&#xA;}"/>
+  <RTCppProperties:ArtifactProperties xmi:id="_EIBbcN2SEea-l5c-PR3o_g" base_Artifact="_8821QN2REea-l5c-PR3o_g" includeFile="#include &quot;Serializer.hh&quot;&#xA;#include &quot;Event.hh&quot;&#xA;#include &lt;string>&#xA;#include &lt;stdlib.h>&#xA;#include &lt;unistd.h>&#xA;&#xA;class Text : public Serializer {&#xA;&#xA;    private:&#xA;        std::string format;&#xA;&#xA;        // separators&#xA;        char separator;&#xA;        char paramSeparator;&#xA;        char keyValueSeparator;&#xA;&#xA;        std::vector&lt;std::string> fields;&#xA;        unsigned int fieldNumber;&#xA;        const std::vector&lt;std::string> split(const std::string data, const char separator) const;&#xA;&#xA;    protected:&#xA;        const std::string getField(const std::string field, const Event&amp; event) const;&#xA;        void setField(const std::string field, const std::string value, Event&amp; event) const;&#xA;&#xA;&#xA;    public:&#xA;        Text();&#xA;        virtual ~Text();&#xA;        virtual void configure(std::map&lt;std::string, std::string> configList);&#xA;        virtual const std::string serialize(const Event event) const;&#xA;        const std::string serializeParams(const Event event) const;&#xA;        virtual Event parse(const std::string data) const;&#xA;        void parseParameters(Event&amp; event, const std::string data) const;&#xA;        void setFormat(const std::string format);&#xA;        const std::string getFormat() const;&#xA;        void setSeparator(const char separator);&#xA;        void setParamSeparator(const char paramSeparator);&#xA;        void setKeyValueSeparator(const char keyValueSeparator);&#xA;};" sourceFile="#include &quot;Event.hh&quot;&#xA;#include &quot;umlrttimespec.hh&quot;&#xA;&#xA;#include &lt;string.h>&#xA;#include &lt;sstream>&#xA;#include &lt;iostream>&#xA;#include &lt;sstream>&#xA;#include &lt;stdio.h>&#xA;#include &lt;stdlib.h>&#xA;#include &lt;vector>&#xA;#include &lt;algorithm>&#xA;&#xA;Text::Text() : Serializer() {&#xA;    this->setSeparator('|');&#xA;    this->setParamSeparator(';');&#xA;    this->setKeyValueSeparator(':');&#xA;    this->setFormat(&quot;eventId|sourceName|eventSource|eventKind|seconds|nanoseconds|params&quot;);&#xA;}&#xA;&#xA;Text::~Text() {&#xA;}&#xA;&#xA;void Text::configure(std::map&lt;std::string, std::string> configList) {&#xA;    std::string separator, paramSeparator, keyValueSeparator, format;&#xA;&#xA;    separator = this->getConfig(configList, &quot;text.separator&quot;);&#xA;    paramSeparator = this->getConfig(configList, &quot;text.paramSeparator&quot;);&#xA;    keyValueSeparator = this->getConfig(configList, &quot;text.keyValueSeparator&quot;);&#xA;    format = this->getConfig(configList, &quot;text.format&quot;);&#xA;&#xA;    if (!separator.empty())&#xA;        this->setSeparator(separator[0]);&#xA;&#xA;    if (!paramSeparator.empty())&#xA;        this->setParamSeparator(paramSeparator[0]);&#xA;&#xA;    if (!keyValueSeparator.empty())&#xA;        this->setKeyValueSeparator(keyValueSeparator[0]);&#xA;&#xA;&#xA;    if (!format.empty())&#xA;        this->setFormat(format);&#xA;&#xA;}&#xA;&#xA;void Text::setFormat(const std::string format) {&#xA;    this->format = format;&#xA;    std::vector&lt;std::string> v = this->split(format, this->separator);&#xA;&#xA;    if (!v.size())&#xA;        return;&#xA;&#xA;    this->fields.clear();&#xA;    this->fields = v;&#xA;    this->fieldNumber = this->fields.size();&#xA;}&#xA;&#xA;const std::string Text::getFormat() const {&#xA;    return this->format;&#xA;}&#xA;&#xA;void Text::setSeparator(const char separator) {&#xA;    this->separator = separator;&#xA;}&#xA;&#xA;void Text::setParamSeparator(const char paramSeparator) {&#xA;    this->paramSeparator = paramSeparator;&#xA;}&#xA;&#xA;void Text::setKeyValueSeparator(const char keyValueSeparator) {&#xA;    this->keyValueSeparator = keyValueSeparator;&#xA;}&#xA;&#xA;const std::string Text::serialize(Event event) const {&#xA;    &#xA;    char fieldSeparator = this->separator;&#xA;&#xA;    // results&#xA;    std::stringstream out;&#xA;&#xA;    std::vector&lt;std::string>::iterator it1;&#xA;    std::vector&lt;std::string> v = this->fields;&#xA;&#xA;    for (it1 = v.begin() ; it1 != v.end(); ++it1) {&#xA;        std::string field = *it1;&#xA;        std::transform(field.begin(), field.end(), field.begin(), ::tolower);&#xA;        out &lt;&lt; this->getField(field, event) &lt;&lt; fieldSeparator;&#xA;    }&#xA;&#xA;    return out.str();&#xA;}&#xA;&#xA;const std::string Text::serializeParams(Event event) const {&#xA;&#xA;    // results&#xA;    std::stringstream out;&#xA;&#xA;    // params&#xA;    std::map&lt;std::string,std::string>::const_iterator it2;&#xA;    std::map&lt;std::string,std::string> params = event.getParams();&#xA;&#xA;    if (params.empty())&#xA;        return out.str();&#xA;&#xA;&#xA;    it2 = params.begin();&#xA;    out &lt;&lt; it2->first &lt;&lt; this->keyValueSeparator &lt;&lt; it2->second;&#xA;    ++it2;&#xA;&#xA;    for (; it2 != params.end(); ++it2) {&#xA;        out &lt;&lt; this->paramSeparator &lt;&lt; it2->first &lt;&lt; this->keyValueSeparator &lt;&lt; it2->second;&#xA;    }&#xA;&#xA;    return out.str();&#xA;}&#xA; &#xA;Event Text::parse(const std::string data) const {&#xA;&#xA;    char fieldSeparator = this->separator;&#xA;&#xA;    std::vector&lt;std::string> values = this->split(data, fieldSeparator);&#xA;    Event event;&#xA;&#xA;    if (values.size() &lt; fieldNumber) {&#xA;        std::cout &lt;&lt; &quot;Error in parsing event stream, only &quot; &lt;&lt; values.size() &lt;&lt; &quot; are parsed \n&quot;;&#xA;        return event;&#xA;    }&#xA;&#xA;    std::vector&lt;std::string>::iterator it;&#xA;    std::vector&lt;std::string> v = this->fields;&#xA;    int i = 0;&#xA;&#xA;    for (it = v.begin() ; it != v.end(); ++it) {&#xA;        std::string field = *it;&#xA;        std::transform(field.begin(), field.end(), field.begin(), ::tolower);&#xA;        this->setField(field, values[i], event);&#xA;        i++;&#xA;    }&#xA;&#xA;    return event;&#xA;}&#xA;&#xA;void Text::parseParameters(Event&amp; event, const std::string data) const {&#xA;&#xA;    std::vector&lt;std::string> v = this->split(data, this->paramSeparator);&#xA;    std::string temp;&#xA;&#xA;    if (v.size() == 0)&#xA;        return;&#xA;&#xA;    event.clearParams();&#xA;&#xA;    for (unsigned i = 0; i &lt; v.size(); i++) {&#xA;&#xA;        std::string::size_type sepIndex = 0;&#xA;        std::string key, value;&#xA;&#xA;        temp = v[i];&#xA;&#xA;        sepIndex = temp.find(this->keyValueSeparator, 0);&#xA;        key = temp.substr(0, sepIndex);&#xA;        value = temp.substr(sepIndex + 1, temp.length());&#xA;&#xA;        event.setParam(key, value);&#xA;&#xA;    }&#xA;}&#xA;&#xA;const std::vector&lt;std::string> Text::split(const std::string data, const char separator) const {&#xA;&#xA;    std::vector&lt;std::string> v;&#xA;    std::string temp = &quot;&quot;;&#xA;    bool newField = false;&#xA;&#xA;    for (unsigned int i = 0; i &lt; data.length(); i++) {&#xA;        if (data[i] == separator) {&#xA;            newField = false;&#xA;            v.push_back(temp);&#xA;            temp = &quot;&quot;;&#xA;        }&#xA;        else {&#xA;            temp = temp + (data[i]);&#xA;            newField = true;&#xA;        }&#xA;    }&#xA;    if (newField)&#xA;        v.push_back(temp);&#xA;&#xA;    return v;&#xA;}&#xA;&#xA;// The functions below have to be overriden when extending the observer&#xA;const std::string Text::getField(const std::string field, const Event&amp; event) const {&#xA;&#xA;    std::stringstream ss; // for conversion purpose&#xA;&#xA;    if (field == &quot;eventid&quot;)&#xA;        return event.getEventId();&#xA;    else if (field == &quot;sourcename&quot;)&#xA;        return event.getSourceName();&#xA;    else if (field == &quot;eventsource&quot;) {&#xA;        ss &lt;&lt; event.getEventSource();&#xA;        return ss.str();&#xA;    }&#xA;    else if (field == &quot;eventkind&quot;) {&#xA;        ss &lt;&lt; event.getEventKind();&#xA;        return ss.str();&#xA;    }&#xA;    else if (field == &quot;seconds&quot;) {&#xA;        ss &lt;&lt; event.getSeconds();&#xA;        return ss.str();&#xA;    }&#xA;    else if (field == &quot;nanoseconds&quot;) {&#xA;        ss &lt;&lt; event.getNanoseconds();&#xA;        return ss.str();&#xA;    }&#xA;    else if (field == &quot;params&quot;) {&#xA;        return this->serializeParams(event);&#xA;    }&#xA;&#xA;    return &quot;&quot;;&#xA;}&#xA;&#xA;void Text::setField(const std::string field, const std::string value, Event&amp; event) const {&#xA;&#xA;    std::stringstream ss; // for conversion purpose&#xA;&#xA;    if (field == &quot;eventid&quot;)&#xA;        event.setEventId(value);&#xA;    else if (field == &quot;sourcename&quot;)&#xA;        event.setSourceName(value);&#xA;    else if (field == &quot;eventsource&quot;) {&#xA;        event.setEventSource((Event::EventSource)(atoi(value.c_str())));&#xA;    }&#xA;    else if (field == &quot;eventkind&quot;) {&#xA;        event.setEventKind((Event::EventKind)(atoi(value.c_str())));&#xA;    }&#xA;    else if (field == &quot;seconds&quot;) {&#xA;        event.setSeconds(atol(value.c_str()));&#xA;    }&#xA;    else if (field == &quot;nanoseconds&quot;) {&#xA;        event.setNanoseconds(atol(value.c_str()));&#xA;    }&#xA;    else if (field == &quot;params&quot;) {&#xA;        this->parseParameters(event, value);&#xA;    }&#xA;}&#xA;"/>
+  <RTCppProperties:ArtifactProperties xmi:id="_RgSNoN6xEeaXI8p9zQfKUQ" base_Artifact="_PDk6oN6xEeaXI8p9zQfKUQ" includeFile="#include &quot;Method.hh&quot;&#xD;&#xA;#include &lt;string>&#xD;&#xA;#include &lt;stdlib.h>&#xD;&#xA;#include &lt;unistd.h>&#xD;&#xA;#include &lt;sys/types.h>&#xD;&#xA;#include &lt;sys/socket.h>&#xD;&#xA;#include &lt;netinet/in.h>&#xD;&#xA;#include &lt;arpa/inet.h>&#xD;&#xA;#include &lt;netdb.h>&#xD;&#xA;&#xD;&#xA;class ClientSocket : public Method {&#xD;&#xA;&#xD;&#xA;private:&#xD;&#xA;std::string address;&#xD;&#xA;int port;&#xD;&#xA;int sockfd, portno, n;&#xD;&#xA;struct sockaddr_in serv_addr;&#xD;&#xA;struct hostent *server;&#xD;&#xA;&#xD;&#xA;char buffer[256];&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;public:&#xD;&#xA;ClientSocket();&#xD;&#xA;virtual ~ClientSocket();&#xD;&#xA;virtual void configure(std::map&lt;std::string, std::string> configList);&#xD;&#xA;virtual const bool canConnect() const;&#xD;&#xA;virtual int establishConnection();&#xD;&#xA;virtual void disconnect();&#xD;&#xA;virtual void read();&#xD;&#xA;virtual void sendData(std::string data);&#xD;&#xA;&#xD;&#xA;const int getPort() const;&#xD;&#xA;void setPort(const int port);&#xD;&#xA;&#xD;&#xA;const std::string getAddress() const;&#xD;&#xA;void setAddress(const std::string address);&#xD;&#xA;};" sourceFile="#include &lt;stdio.h>&#xD;&#xA;#include &lt;stdlib.h>&#xD;&#xA;#include &lt;string.h>&#xD;&#xA;#include &lt;unistd.h>&#xD;&#xA;#include &lt;sys/types.h>&#xD;&#xA;#include &lt;sys/socket.h>&#xD;&#xA;#include &lt;netinet/in.h>&#xD;&#xA;#include &lt;arpa/inet.h>&#xD;&#xA;#include &lt;netdb.h>&#xD;&#xA;#include &lt;sstream>&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;ClientSocket::ClientSocket() : Method() {&#xD;&#xA;this->setPort(8080);&#xD;&#xA;this->setAddress(&quot;localhost&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;ClientSocket::~ClientSocket() {&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void ClientSocket::configure(std::map&lt;std::string, std::string> configList) {&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;std::string port, address;&#xD;&#xA;port = this->getConfig(configList, &quot;port&quot;);&#xD;&#xA;address = this->getConfig(configList, &quot;address&quot;);&#xD;&#xA;&#xD;&#xA;if (!port.empty())&#xD;&#xA;this->setPort(atoi(port.c_str()));&#xD;&#xA;&#xD;&#xA;if (!address.empty())&#xD;&#xA;this->setAddress(address);&#xD;&#xA;&#xD;&#xA;printf(&quot;address: %s, port: %d\n&quot;, getAddress().c_str(), getPort());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;const bool ClientSocket::canConnect() const {&#xD;&#xA;return true;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;int ClientSocket::establishConnection() {&#xD;&#xA;&#xA;&#xD;&#xA;int result = -1;&#xD;&#xA;&#xD;&#xA;sockfd = socket(AF_INET, SOCK_STREAM, 0);&#xD;&#xA;if (sockfd &lt; 0) &#xD;&#xA;perror(&quot;ERROR opening socket&quot;);&#xD;&#xA;server = gethostbyname(this->getAddress().c_str());&#xD;&#xA;&#xD;&#xA;if (server == NULL) {&#xD;&#xA;perror(&quot;ERROR, no such host\n&quot;);&#xD;&#xA;exit(0);&#xD;&#xA;}&#xA;&#xD;&#xA;bzero((char *) &amp;serv_addr, sizeof(serv_addr));&#xD;&#xA;serv_addr.sin_family = AF_INET;&#xD;&#xA;bcopy((char *)server->h_addr, &#xD;&#xA;(char *)&amp;serv_addr.sin_addr.s_addr,&#xD;&#xA;server->h_length);&#xD;&#xA;serv_addr.sin_port = htons(this->getPort());&#xA;&#xA;&#xD;&#xA;if (connect(sockfd,(struct sockaddr *) &amp;serv_addr,sizeof(serv_addr)) &lt; 0) &#xD;&#xA;perror(&quot;ERROR connecting\n&quot;);&#xD;&#xA;&#xD;&#xA;return result;&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void ClientSocket::disconnect() {&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void ClientSocket::read() {&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void ClientSocket::sendData(std::string data) {&#xD;&#xA;write(sockfd,data.c_str(),data.length());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;const int ClientSocket::getPort() const {&#xD;&#xA;return this->port;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void ClientSocket::setPort(const int port) {&#xD;&#xA;this->port = port;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;const std::string ClientSocket::getAddress() const {&#xD;&#xA;return this->address;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;void ClientSocket::setAddress(const std::string address) {&#xD;&#xA;this->address = address;&#xD;&#xA;}"/>
+  <UMLRealTime:RTMessageSet xmi:id="_TIYpkNRNEearFdKvR_8nWw" base_Interface="_TIW0YNRNEearFdKvR_8nWw" rtMsgKind="out"/>
+  <RTCppProperties:PassiveClassProperties xmi:id="_MHfkAN6xEeaXI8p9zQfKUQ" base_Class="_It380N6xEeaXI8p9zQfKUQ" generate="false"/>
+  <UMLRealTime:CapsulePart xmi:id="_TtFX8N9XEeaslsNogbStzw" base_Property="_Ts_RUN9XEeaslsNogbStzw"/>
+  <UMLRealTime:RTPort xmi:id="_U_4ckN9XEeaslsNogbStzw" isWired="false" base_Port="_U_2AUN9XEeaslsNogbStzw"/>
+  <UMLRealTime:RTPort xmi:id="_WP56AN9XEeaslsNogbStzw" isWired="false" base_Port="_WP3dwN9XEeaslsNogbStzw"/>
+  <UMLRealTime:RTPort xmi:id="_XueJwN9XEeaslsNogbStzw" isWired="false" base_Port="_XucUkN9XEeaslsNogbStzw"/>
+  <UMLRTStateMachines:RTState xmi:id="_6tI1gExXEeeqN6OadgglSg" base_State="_6tCH0ExXEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_RKi2sExYEeeqN6OadgglSg" base_State="_RKZswExYEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_qkoEYExYEeeqN6OadgglSg" base_State="_qkeTYExYEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_2Oi4YExZEeeqN6OadgglSg" base_State="_2OZucExZEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_0bctoExaEeeqN6OadgglSg" base_Region="_0bTjsExaEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_0bctpkxaEeeqN6OadgglSg" base_Pseudostate="_0bctpUxaEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_0bmep0xaEeeqN6OadgglSg" base_Pseudostate="_0bmepkxaEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_7SAVwExaEeeqN6OadgglSg" base_State="_7R2kwExaEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_IBC-wUxcEeeqN6OadgglSg" base_State="_IBC-wExcEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_EyRgMUxdEeeqN6OadgglSg" base_State="_EyRgMExdEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_aNKfAExeEeeqN6OadgglSg" base_Region="_aNHbsExeEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_aNRMsExeEeeqN6OadgglSg" base_Pseudostate="_aNM7QExeEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_aNa9sExeEeeqN6OadgglSg" base_Pseudostate="_aNWFMExeEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_aNkusExeEeeqN6OadgglSg" base_Pseudostate="_aNfPIExeEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_vmxO8ExgEeeqN6OadgglSg" base_State="_vmuLoExgEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_bCA8AUxhEeeqN6OadgglSg" base_State="_bCA8AExhEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_wdBFAUxhEeeqN6OadgglSg" base_State="_wdBFAExhEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_SzN5IExiEeeqN6OadgglSg" base_Pseudostate="_SzEvMExiEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_oFwiUExlEeeqN6OadgglSg" base_Pseudostate="_oFnYYExlEeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTRegion xmi:id="_HzLYg005EeeqN6OadgglSg" base_Region="_HzLYcE05EeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_HzVJdU05EeeqN6OadgglSg" base_Pseudostate="_HzVJdE05EeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_HzeTYU05EeeqN6OadgglSg" base_Pseudostate="_HzeTYE05EeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_NMfmgU05EeeqN6OadgglSg" base_State="_NMfmgE05EeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_aDJI0U05EeeqN6OadgglSg" base_State="_aDJI0E05EeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTState xmi:id="_jacPYE05EeeqN6OadgglSg" base_State="_jaSeYE05EeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_XBC0UE06EeeqN6OadgglSg" base_Pseudostate="_XA5DUE06EeeqN6OadgglSg"/>
+  <UMLRTStateMachines:RTPseudostate xmi:id="_-AFJ4E08EeeqN6OadgglSg" base_Pseudostate="_9_7Y4E08EeeqN6OadgglSg"/>
+</xmi:XMI>
